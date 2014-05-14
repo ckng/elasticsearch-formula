@@ -1,4 +1,4 @@
-{% set es = pillar.get('elasticsearch'. {}) -%}
+{% set es = pillar.get('elasticsearch', {}) -%}
 {% set version = es.get('version', 1.1) -%}
 
 elasticsearch:

@@ -34,4 +34,4 @@ elasticsearch:
   service.running:
     - enable: True
     - watch:
-      pkg: elasticsearch
+      - pkg: elasticsearch

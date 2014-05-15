@@ -31,3 +31,7 @@ elasticsearch:
     - refresh: True
     - require:
       - pkgrepo: elasticsearch
+  service.running:
+    - enable: True
+    - watch:
+      pkg: elasticsearch

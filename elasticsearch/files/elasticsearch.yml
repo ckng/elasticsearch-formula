@@ -1,4 +1,4 @@
-{% set es = pillar.get('elasticsearc',{}) -%}
+{% set es = pillar.get('elasticsearch',{}) -%}
 {% set cluster = es.get('cluster','idontreaddocs') -%}
 {% set paths = es.get('paths',{}) -%}
 {% set conf = paths.get('conf','/etc/elasticsearch') -%}

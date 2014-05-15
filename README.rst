@@ -6,9 +6,9 @@ Elasticsearch
 
 Install elasticsearch from the elasticsearch repos 
 
+so far this has only been tested on centos 6.5
 -------------
 
-Add a jenkins nginx entry. 
 
 pillar customizations available:
 

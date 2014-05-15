@@ -1,0 +1,6 @@
+elasticsearch:
+ cluster: clustername # defaults to idontreaddocs
+ paths:
+  conf: /etc/elasticsearch
+  data: /var/lib/elasticsearch
+  logs: /var/log/elasticsearch

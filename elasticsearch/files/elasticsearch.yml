@@ -2,8 +2,8 @@
 {% set cluster = es.get('cluster','idontreaddocs') -%}
 {% set paths = es.get('paths',{}) -%}
 {% set conf = paths.get('conf','/etc/elasticsearch') -%}
-{% set data = paths.get('conf','/var/lib/elasticsearch') -%}
-{% set logs = paths.get('conf','/var/log/elasticsearch') -%}
+{% set data = paths.get('data','/var/lib/elasticsearch') -%}
+{% set logs = paths.get('logs','/var/log/elasticsearch') -%}
 
 
 

@@ -1,6 +1,22 @@
 {% set es = pillar.get('elasticsearch', {}) -%}
 {% set version = es.get('version', 1.1) -%}
 
+/etc/elasticsearch/elasticsearch.yml:
+  file:
+    - managed
+    - template: jinja
+    - source: salt://elasticsearch/files/elasticsearch.yml
+    - require:
+      - pkg: elasticsearch
+
+/etc/elasticsearch/logging.yml:
+  file:
+    - managed
+    - template: jinja
+    - source: salt://elasticsearch/files/logging.yml
+    - require:
+      - pkg: elasticsearch
+
 elasticsearch:
   pkgrepo.managed:
     - humanname: Elastic Search Repo

@@ -1,6 +1,8 @@
 elasticsearch:
- cluster: clustername # defaults to idontreaddocs
- paths:
-  conf: /etc/elasticsearch
-  data: /var/lib/elasticsearch
-  logs: /var/log/elasticsearch
+  cluster: clustername # defaults to idontreaddocs
+  paths:
+    conf: /etc/elasticsearch
+    data: /var/lib/elasticsearch
+    logs: /var/log/elasticsearch
+  script:
+    disable_dynamic: "true"

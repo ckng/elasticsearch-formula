@@ -1,9 +1,9 @@
-{% set es = pillar.get('elasticsearch',{}) -%}
-{% set cluster = es.get('cluster','idontreaddocs') -%}
-{% set paths = es.get('paths',{}) -%}
-{% set conf = paths.get('conf','/etc/elasticsearch') -%}
-{% set data = paths.get('data','/var/lib/elasticsearch') -%}
-{% set logs = paths.get('logs','/var/log/elasticsearch') -%}
+{% set es = pillar.get('elasticsearch', {}) -%}
+{% set cluster = es.get('cluster', 'idontreaddocs') -%}
+{% set paths = es.get('paths', {}) -%}
+{% set conf = paths.get('conf', '/etc/elasticsearch') -%}
+{% set data = paths.get('data', '/var/lib/elasticsearch') -%}
+{% set logs = paths.get('logs', '/var/log/elasticsearch') -%}
 
 
 
@@ -385,3 +385,6 @@ http.enabled: true
 #monitor.jvm.gc.old.warn: 10s
 #monitor.jvm.gc.old.info: 5s
 #monitor.jvm.gc.old.debug: 2s
+
+#################################### Script ##################################
+script.disable_dynamic: {{ es.script.disable_dynamic }}
